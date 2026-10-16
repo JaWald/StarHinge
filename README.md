@@ -24,7 +24,3 @@ A constant rod speed only approximates the required rotation and builds up a tan
 | **Drive** | M8 threaded rod, 1.25 mm pitch |
 | **Frame** | Wood |
 | **Firmware** | C++, Arduino framework, PlatformIO |
-
-## License
-
-[MIT](LICENSE)
