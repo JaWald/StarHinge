@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>
+            Body{background:#000;color:#c33;font-family:Consolas,monospace;text-align:left;padding-top:20px;padding-left:20px}
+            Button{background:#100;color:#e44;border:1px solid #600;border-radius:4px;padding:10px;font-size:16px}
+            h2{margin-bottom:6px}
+            hr{border:none;border-top:1px solid #600;margin:4px 10px 14px 0}
+            #s{display:inline-block;margin-left:10px;padding:10px;border:1px solid #300;border-radius:4px;min-width:90px}
+            input[type=range]{accent-color:#a22;width:200px;vertical-align:middle}
+        </style>
+    </head>
+    <body>
+        <h2>ESP32 Star Tracker</h2>
+        <hr>
+        <button onclick="fetch('/dir').then(r=>r.text()).then(t=>s.textContent=t)">Direction</button>
+        <span id="s">UP</span>
+        <p>
+            <button onclick="add(-10)">-10</button>
+            <button onclick="add(-1)">-1</button>
+            <button onclick="add(-0.01)">-0.01</button>
+            <span id="v">1.00</span>
+            <button onclick="add(0.01)">+0.01</button>
+            <button onclick="add(1)">+1</button>
+            <button onclick="add(10)">+10</button>
+        </p>
+        <script>
+            function add(d) {
+                fetch('/speed?value=' + d)
+                .then(r => r.text())
+                .then(t => v.textContent = t);
+            }
+        </script>
+    </body>
+</html>
