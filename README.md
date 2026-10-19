@@ -1,9 +1,6 @@
 # StarHinge
 
-A DIY barn door star tracker for astrophotography, built from wood and ball bearings, driven by an ESP32-S3 and a NEMA17 stepper motor. It rotates the camera so that it cancels out the earths rotation, leading to long exposures producing sharp stars instead of trails and enabling the capture of much fainter details in nebulae and distant galaxies (see untracked/tracked comparison below).
-
-![Andromeda Galaxy (M31) – preliminary result](docs/images/result.jpg)
-*Andromeda Galaxy (M31) - preliminary result*
+A DIY barn door star tracker for astrophotography, built from wood and ball bearings, driven by an ESP32-S3 and a NEMA17 stepper motor. It rotates the camera so that it cancels out the earths rotation, leading to long exposures producing sharp stars instead of trails and enabling the capture of much fainter details in nebulae and distant galaxies.
 
 | Untracked | Tracked with StarHinge |
 |---|---|
@@ -14,6 +11,13 @@ A DIY barn door star tracker for astrophotography, built from wood and ball bear
 Two wooden boards are joined by a hinge aligned with the celestial pole. A stepper motor drives a threaded rod that pushes the boards apart at sidereal rate.
 
 A constant rod speed only approximates the required rotation and builds up a tangent error over time. StarHinge instead calculates the exact rod length for the target hinge angle `θ(t) = ω · t` from the frame geometry and converts it into motor steps, timed by the ESP32's microsecond hardware timer.
+
+## Gallery
+![Andromeda Galaxy (M31)](docs/images/andromeda.jpg)
+*Andromeda Galaxy (M31)*
+
+![Pleiades Star Cluster (M45)](docs/images/pleiades.jpg)
+*Pleiades Star Cluster (M45)*
 
 ## Specs
 
