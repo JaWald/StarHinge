@@ -15,8 +15,8 @@ const int BOOT_PIN = 0;
 // geometry (mm)
 const double RADIUS_UPPER = 282.5;
 const double RADIUS_LOWER = 287.0;
-const double MOUNT_DIST_UPPER = 45.0;
-const double MOUNT_DIST_LOWER = 45.0;
+const double MOUNT_DIST_UPPER = 44.0;
+const double MOUNT_DIST_LOWER = 44.0;
 const double THREAD_PITCH = 1.25;
 
 const double ROTATION_EARTH = 7.2921e-5;
