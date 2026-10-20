@@ -6,18 +6,15 @@ A DIY barn door star tracker for astrophotography, built from wood and ball bear
 |---|---|
 | <img src="docs/images/untracked.jpg" width="500"> | <img src="docs/images/tracked.jpg" width="500"> |
 
+| Andromeda Galaxy (M31) | Pleiades Star Cluster (M45) |
+|---|---|
+| <img src="docs/images/andromeda.jpg" width="500"> | <img src="docs/images/pleiades.jpg" width="500"> |
+
 ## How it works
 
 Two wooden boards are joined by a hinge aligned with the celestial pole. A stepper motor drives a threaded rod that pushes the boards apart at sidereal rate.
 
 A constant rod speed only approximates the required rotation and builds up a tangent error over time. StarHinge instead calculates the exact rod length for the target hinge angle `θ(t) = ω · t` from the frame geometry and converts it into motor steps, timed by the ESP32's microsecond hardware timer.
-
-## Gallery
-![Andromeda Galaxy (M31)](docs/images/andromeda.jpg)
-*Andromeda Galaxy (M31)*
-
-![Pleiades Star Cluster (M45)](docs/images/pleiades.jpg)
-*Pleiades Star Cluster (M45)*
 
 ## Specs
 
